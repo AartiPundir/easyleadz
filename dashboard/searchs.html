@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet">
+    <title>Easyleadz : Dashboard</title>
+
+
+<style>
+    body {
+    opacity: 0.9;
+    background-color: #0000004f;
+   
+    
+}
+.speech, .speech1, .speech2 {
+    opacity: 1;   
+}
+     .lrg{
+    margin-top: -17px;
+    z-index: 999;
+    position: relative;
+    font-size:40px;
+     }
+
+    .speech {
+    width: 250px;
+    background: #f2f7ff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 35px;
+    color: black;
+    position: relative;
+    margin-top: -105px;
+    margin-right: 10px;
+    margin-left: -20px;
+    margin-bottom:61px;
+    border:1px solid black
+        }
+
+.speech:after,
+.speech:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.speech:after {
+    top: 112px;
+    border-color: transparent transparent transparent #f2f7ff;
+    border-width: 10px;
+}
+
+.speech:before {
+    top: 111px;
+    border-color: transparent transparent transparent BLACK;
+    border-width: 11px;
+}    
+
+.speech1:after,
+.speech1:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 53%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    rotate: 91deg;
+}
+
+.speech1:after {
+    top: 131px;
+    border-color: transparent transparent transparent #f2f7ff;
+    border-width: 10px;
+}
+
+.speech1:before {
+    top: 132px;
+    border-color: transparent transparent transparent BLACK;
+    border-width: 11px;
+} 
+
+.speech2:after,
+.speech2:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    rotate: 268deg
+}
+
+.speech2:after {
+    top: -19px;
+    border-color: transparent transparent transparent #f2f7ff;
+    border-width: 10px;
+}
+
+.speech2:before {
+    top: -23px;
+    border-color: transparent transparent transparent BLACK;
+    border-width: 11px;
+}    
+  
+    /* .speech:before {
+    content: "";
+    position: absolute;
+    border-left: 0px solid #f2f7ff;
+    border-right: 32px solid transparent;
+    border-top: 20px solid #f2f7ff;
+    border-bottom: 20px solid transparent;
+    right: -20px;
+    top: 126px;
+        } */
+
+        .speech1 {
+            width: 250px;
+    background: #f2f7ff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 35px;
+    color: black;
+    position: relative;
+    margin-top: -141px;
+    margin-right: -123px;
+    margin-left: -84px;
+    margin-bottom: 128px;
+    border:1px solid black;
+        }
+  
+    /* .speech1:before {
+        content: "";
+    position: absolute;
+    border-left: 0px solid #f2f7ff;
+    border-right: 32px solid transparent;
+    border-top: 20px solid #f2f7ff;
+    border-bottom: 20px solid transparent;
+    right: 37px;
+    top: 130px;
+        } 
+         */
+        .speech2 {
+    width: 250px;
+    background: #f2f7ff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 35px;
+    color: black;
+    position: relative;
+    margin-top: 51px;
+    margin-right: -123px;
+    margin-left: -84px;
+    margin-bottom: -71px;
+    border:1px solid black;
+        }
+        .nav-seprator{
+            height:82px;
+        }
+        .ctn{
+            text-align:center;
+        }
+    /* .speech2:before {
+        content: "";
+    position: absolute;
+    border-left: 0px solid #f2f7ff;
+    border-right: 32px solid transparent;
+    border-bottom: 20px solid #f2f7ff;
+    border-top: 20px solid transparent;
+    right: 184px;
+    top: -40px;
+        }     */
+
+    .search_txt{
+        padding: 5px;
+        min-width: 68%;
+        margin: 0px;
+        display: inline-table;
+        vertical-align: top;
+    }
+    .search_txt2{
+        padding: 5px;
+        min-width: 320px;
+        margin: 0px;
+        margin-bottom:10px;
+        display: inline-table;
+        vertical-align: top;
+    }
+    .sbtn{
+      text-transform: uppercase;
+        padding: 6px 10px;
+        margin-top: -1px;
+        vertical-align: top;
+    }
+    .nav-pills .nav-link{
+        border:none;
+        background: 0 0;
+        border: 0;
+        border-radius: .25rem;
+    }
+    .sresult {
+        text-align:center;margin:0 auto;
+    }
+    .sresult .card{
+       /* display: inline-flex;
+        width: 30%;*/
+        text-align: left;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        border-radius: 0.25rem!important;
+        margin: 10px;
+    }
+    .nav-seprator{
+        border-bottom: 1px solid rgba(0,0,0,.15);
+        padding: 10px 0px;
+        border-top: 1px solid rgba(0,0,0,.15);
+    }
+    a.vphnum{color:#fff !important;}
+    .c-content{font-size:16px;height:30px;overflow:hidden;}
+    .nav-link{cursor:pointer;}
+    .card-wrapper{
+        width:30%;display: inline-block;
+    }
+    @media (max-width: 767px) {
+        .sresult .card{
+            width:99%;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container container-mini">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 15.508H22.5791V13.0447H0V15.508ZM0 9.34969H22.5791V6.88636H0V9.34969ZM0 0.728027V3.19136H22.5791V0.728027H0Z" fill="#141414"/>
+                    </svg>
+                </span>
+            </button>
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="Easyleadz" >
+            </a>
+            <ul class="d-block d-sm-none">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../img/profile-pic.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="javascript:void(0);" >Profile</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 ms-sm-5">
+                    <li class="nav-item active"  data-title="Menu Bar" data-intro="Menu Bar" >
+                        <a class="nav-link" aria-current="page" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html" id="step3">Install Mr. E</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html" id="step7">Upgrade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html" id="step5">EasySearch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html" id="step4">EasyProspect</a>
+                    </li>
+                </ul>
+                <ul class="d-none d-sm-block">
+                    <li class="nav-item dropdown"  data-title="Menu Bar" data-intro="Menu Bar" id="step6">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../img/profile-pic.png" alt="">
+                            Ganesh Govalkar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                          <li><a class="dropdown-item" href="javascript:void(0);" >Profile</a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="inner-banner bg-white page-dashboard">
+        <div class="container container-mini">
+            <div class="row">
+                <div class="col-lg-3 col-sm-12">
+                    <div class="user-card" >
+                        <div class="uc-profile text-center mb-4" id="step8" >
+                            <div class="img-bx">
+                                <img src="../img/ganesh-govalkar.png" alt="">
+                                <div class="img-status">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.50009 1.99995C3.50062 1.46987 3.71157 0.961672 4.08659 0.587032C4.4616 0.212392 4.97001 0.00195286 5.50009 0.00195313H10.5001C11.0302 0.00195286 11.5386 0.212392 11.9136 0.587032C12.2886 0.961672 12.4996 1.46987 12.5001 1.99995H13.4961C13.8939 1.99995 14.2754 2.15799 14.5568 2.43929C14.8381 2.7206 14.9961 3.10213 14.9961 3.49995V5.00495C14.9961 5.73115 14.7324 6.43264 14.254 6.97895C13.7755 7.52527 13.115 7.87921 12.3951 7.97495C12.1913 8.89102 11.7065 9.72056 11.0084 10.3477C10.3103 10.9748 9.43368 11.3682 8.50109 11.473V12.968H10.5041C11.0345 12.968 11.5432 13.1787 11.9183 13.5537C12.2934 13.9288 12.5041 14.4375 12.5041 14.968V15.468C12.5041 15.6006 12.4514 15.7277 12.3576 15.8215C12.2639 15.9153 12.1367 15.968 12.0041 15.968H4.00409C3.87149 15.968 3.74431 15.9153 3.65054 15.8215C3.55677 15.7277 3.50409 15.6006 3.50409 15.468V14.968C3.50409 14.4375 3.71481 13.9288 4.08988 13.5537C4.46495 13.1787 4.97366 12.968 5.50409 12.968H7.50109V11.473C6.56787 11.3684 5.69069 10.9747 4.99228 10.3469C4.29388 9.71918 3.80921 8.88879 3.60609 7.97195C2.88478 7.8761 2.22273 7.52185 1.74276 6.97495C1.2628 6.42804 0.997498 5.7256 0.996094 4.99795V3.49995C0.996094 3.10213 1.15413 2.7206 1.43543 2.43929C1.71674 2.15799 2.09827 1.99995 2.49609 1.99995H3.50109H3.50009ZM12.5001 6.93695C12.9283 6.82617 13.3075 6.57631 13.5783 6.22662C13.849 5.87694 13.996 5.44722 13.9961 5.00495V3.49995C13.9961 3.36734 13.9434 3.24017 13.8496 3.1464C13.7559 3.05263 13.6287 2.99995 13.4961 2.99995H12.5011V6.93695H12.5001ZM3.50009 2.99995H2.49709C2.36449 2.99995 2.23731 3.05263 2.14354 3.1464C2.04977 3.24017 1.99709 3.36734 1.99709 3.49995V4.99795C1.99709 5.92795 2.63709 6.71095 3.50209 6.93395V2.99995H3.50009Z" fill="white"/>
+                                    </svg>
+                                    <span>Intermediate</span>
+                                </div>
+                            </div>
+                            <h4>Ganesh Govalkar</h4>
+                            <p>govalkar.ganesh@gmail.com</p>
+                            <hr>
+                            <p >Quality leads generated so far</p>
+                            <h3>1156</h3>
+                            <a href="javascript:void(0);" class="btn btn-p-reverse m-auto" data-title="Credits" data-intro="Get Credits Here">Get Free Credits</a>
+                        </div>
+                        <ul>
+                            <li id="step1"><a href="my-list.html">My List</a></li>
+                            <li id="step2"><a href="">My Team</a></li>
+                            <li><a href="bulk-upload.html" >Bulk Upload</a></li>
+                            <li><a href="api.html">API</a></li>
+                            <li><a href="help-and-support.html">Help &amp; Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="am-detail shadow-box mt-4 mb-5 mb-sm-0">
+                        <a href="javascript:void(0);" class="btn btn-p m-auto">
+                            Share Dashboard
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-3">
+                                <path d="M16.7781 5.69868L12.528 9.68261C12.08 10.1026 11.3333 9.79121 11.3333 9.17144V7.06315C7.06636 7.09157 5.26628 8.09185 6.47018 12.0833C6.60249 12.5219 6.09105 12.8616 5.73216 12.591C4.58209 11.7238 3.54167 10.0651 3.54167 8.39079C3.54167 4.17389 7.01247 3.33709 11.3333 3.3133V1.20348C11.3333 0.583151 12.0805 0.27278 12.528 0.692311L16.7781 4.67633C17.0738 4.95357 17.0741 5.42121 16.7781 5.69868ZM11.3333 11.6073V13.625H1.88889V4.25001H3.39162C3.43931 4.24997 3.48651 4.24038 3.53037 4.22178C3.57423 4.20319 3.61385 4.17599 3.64685 4.14181C4.08818 3.68572 4.59829 3.32472 5.15248 3.03802C5.48097 2.86807 5.35925 2.37501 4.98882 2.37501H1.41667C0.634253 2.37501 0 3.0046 0 3.78126V14.0938C0 14.8704 0.634253 15.5 1.41667 15.5H11.8056C12.588 15.5 13.2222 14.8704 13.2222 14.0938V11.492C13.2222 11.2492 12.9803 11.0799 12.7497 11.1609C12.4263 11.2744 12.0801 11.3084 11.7406 11.2598C11.5261 11.2292 11.3333 11.3921 11.3333 11.6073Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <hr>
+                        <h3>Account Manager Details</h3>
+                        <div class="mb-2">
+                            <label>Name</label>
+                            <p>Sunjay K. Tripathi</p>
+                        </div>
+                        <div class="mb-2">
+                            <label>Contact Number</label>
+                            <p>+91 9800000000</p>
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <p>Sanjay@mail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-12">
+                    
+                    
+                    <div class="row">
+                        <div class="col-12 mt-5" style="display:none">
+                            <script>
+                                var vcode = '5JlATm80tg3gv8xz';
+                            </script>
+                        </div>
+                        <div class="alert alert-danger d-none d-md-block mt-2" role="alert">
+                            <div class="d-flex flex-column flex-sm-row text-center text-sm-left justify-content-between align-items-center">
+                                <p>Tired of manual search? Use Mr. E chrome extension to find contacts on the go.</p>
+                                <div class="text-accuracy d-flex flex-column-reverse flex-sm-row-reverse align-items-center mt-2 mt-sm-0 mb-2 mb-sm-0">
+                                    <a href="https://chrome.google.com/webstore/detail/mr-e-find-b2b-contacts-un/haphbbhhknaonfloinidkcmadhfjoghc" target="_blank" class="btn btn-o">Install now.</a>
+                                    <div class="text-center text-sm-end me-0 me-sm-3 mb-3 mb-sm-0">
+                                        <h3>100% accuracy guaranteed</h3>
+                                        <small>*TnC apply.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow-box con-cat-wrap p-4 d-none d-md-block">
+                            <h2>Quick guide</h2>
+                            <p class="col-12">Search contacts manually or in bulk via the dashboard directly</p>
+                            <div class="d-flex mt-4">
+                                <div class="text-center me-3 cat-item">
+                                    <a class="btn btn-b" href="http://help.easyleadz.com/en/articles/5809860-how-to-use-bulk-search-feature-in-mr-e-tool" target="_blank"><i class="ti-id-badge"></i> Single Search</a>
+                                </div>
+                                <div class="text-center cat-item" style="margin-left:2em">
+                                    <a class="btn btn-b" href="http://help.easyleadz.com/en/articles/5809860-how-to-use-bulk-search-feature-in-mr-e-tool" target="_blank"><i class="ti-id-badge"></i> Bulk Search</a>
+                                </div>
+                                <div class="text-center cat-item" style="margin-left:2em">
+                                    <a class="btn btn-b" href="http://help.easyleadz.com/en/articles/5809860-how-to-use-bulk-search-feature-in-mr-e-tool" target="_blank"><i class="ti-id-badge"></i> Din number Search</a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-12 mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="header-title">
+                                        <h3 class="text-center">Search Decision Makers Phone Numbers</h3>
+                                    </div>
+                                    <div class="col-12 mt-1 text-center">
+                                        <ul class="nav nav-pills mb-3 justify-content-center nav-seprator" id="pills-tab" role="tablist">
+                                            <div class="speech bubble" id="speech">Search your prospects directly through your dashboard by putting in Linkedin URLs</div>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link npbtn active" id="pills-url-tab" data-toggle="pill" data-target="#pills-url" type="button" role="tab" aria-controls="pills-url" aria-selected="true">Search by LinkedIn URL</button>
+                                            </li>
+                                            <div class="speech1 bubble1">You can also try searching direct dials through e-mail ids</div>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link npbtn" id="pills-email-tab" data-toggle="pill" data-target="#pills-email" type="button" role="tab" aria-controls="pills-email" aria-selected="false">Search By Email</button>
+                                            </li>
+                                                                    <li class="nav-item" role="presentation">
+                                                <button class="nav-link npbtn" id="pills-din-tab" data-toggle="pill" data-target="#pills-din" type="button" role="tab" aria-controls="pills-din" aria-selected="false">Search By DIN</button>
+                                            </li>
+                                            <div class="speech2 bubble2">Now you can directly search Director's Phone numbers with their DIN</div>
+                                            
+                                        </ul>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-url" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                <div class="col-12 mt-5 text-center">
+                    
+                                                    <input type="text" value="" placeholder="Enter a LinkedIn URL" id="search" class="search_txt">
+                                                    
+                                                    <button class="btn btn-primary search-btn sbtn mt-1" style="margin:0 auto">Search Now</button>
+                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 text-center">
+                                                        <span>(Enter linkedIn URL . Example https://www.linkedin.com/in/nitinbajaj1)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top:1em;">
+                                                    <div class="col-md-12 text-center">
+                                                        <h5>1 credit for 1 contact</h5>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <center>
+                                                <a class="btn btn-danger lrg" href="https://dashboard.easyleadz.com/search">Explore!</a> 
+                                            </center>
+                                                <div class="row" id="pdata" style="display:none">
+                                                    <div class="col-12 " style="margin-top:2em">
+                                                        <div class="card" style="border:1px solid grey">
+                                                            <div class="card-header alert alert-info" style="margin-bottom:1px">
+                                                                Person detail
+                                                            </div>
+                                                            <div class="card-body">
+                                                            <p class="card-text"><strong>Name:</strong> <span id="pname" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Designation:</strong> <span id="pdes" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Organisation:</strong> <span id="porg" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Phone1:</strong> <span id="pph1" class="cinfo"></span> <span id="cp_btn_1" data-attr="pph1" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Phone2:</strong> <span id="pph2" class="cinfo"></span> <span id="cp_btn_2" data-attr="pph2" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Emails:</strong> <span id="pemail" class="cinfo"></span> <span id="cp_btn_3" data-attr="pemail" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>                                    
+                                                            </div>
+                                                        </div>
+                    
+                                                        <p class="text-center mt-2">(you can download your viewed contacts from <a href="../mylist">mylist</a>, no need to manually copy paste)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-email" role="tabpanel" aria-labelledby="pills-email-tab">
+                                                                                <div class="col-12 mt-5 text-center">
+                    
+                                                        <input type="text" value="" placeholder="Enter Email Address" id="search1" class="search_txt">
+                                                        <button class="btn btn-primary search1-btn sbtn1 mt-1" style="margin:0 auto">Search Now</button>
+                    
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 text-center">
+                                                            <span>(Enter email. Example abc@xyz.com)</span>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="row" style="margin-top:1em;">
+                                                        <div class="col-md-12 text-center">
+                                                            <h5>1 credit for 1 contact</h5>
+                                                        </div>
+                                                    </div>
+                                                                            <div class="row" id="pdata1" style="display:none">
+                                                    <div class="col-12 " style="margin-top:2em">
+                                                        <div class="card" style="border:1px solid grey">
+                                                            <div class="card-header alert alert-info" style="margin-bottom:1px">
+                                                                Person detail
+                                                            </div>
+                                                            <div class="card-body">
+                                                            <p class="card-text"><strong>Name:</strong> <span id="pname1" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Designation:</strong> <span id="pdes1" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Organisation:</strong> <span id="porg1" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>LinkedinUrl:</strong> <span id="rurl1" class="cinfo"></span> <span id="cp_btn_14" data-attr="rurl1" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Phone1:</strong> <span id="pph12" class="cinfo"></span> <span id="cp_btn_11" data-attr="pph12" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Phone2:</strong> <span id="pph22" class="cinfo"></span> <span id="cp_btn_12" data-attr="pph22" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Emails:</strong> <span id="pemail1" class="cinfo"></span> <span id="cp_btn_13" data-attr="pemail1" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>                                    
+                                                            </div>
+                                                        </div>
+                    
+                                                        <p class="text-center mt-2">(you can download your viewed contacts from <a href="../mylist">mylist</a>, no need to manually copy paste)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                    <div class="tab-pane fade" id="pills-din" role="tabpanel" aria-labelledby="pills-din-tab">
+                                                    
+                                                    <div class="col-12 mt-5 text-center">
+                    
+                                                        <input type="text" value="" placeholder="Enter DIN number" id="search3" class="search_txt">
+                                                        &nbsp;
+                                                        <button class="btn btn-primary search3-btn sbtn mt-1" style="margin:0 auto">Search Now</button>
+                    
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 text-center">
+                                                            <span>(Enter a Director Identification Number . Example 06872083)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="margin-top:1em;">
+                                                        <div class="col-md-12 text-center">
+                                                            <h5>1 credit for 1 contact</h5>
+                                                        </div>
+                                                    </div>
+                                                                            
+                                                    <div class="row" id="pdata3" style="display:none">
+                                                    <div class="col-12 " style="margin-top:2em">
+                                                        <div class="card" style="border:1px solid grey">
+                                                            <div class="card-header alert alert-info" style="margin-bottom:1px">
+                                                                Person detail
+                                                            </div>
+                                                            <div class="card-body">
+                                                            <p class="card-text"><strong>Name:</strong> <span id="pname3" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Designation:</strong> <span id="pdes3" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Organisation:</strong> <span id="porg3" class="cinfo"></span></p>
+                                                            <p class="card-text"><strong>Phone1:</strong> <span id="pph13" class="cinfo"></span> <span id="cp_btn_33" data-attr="pph13" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Phone2:</strong> <span id="pph23" class="cinfo"></span> <span id="cp_btn_23" data-attr="pph23" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>
+                                                            <p class="card-text"><strong>Emails:</strong> <span id="pemail3" class="cinfo"></span> <span id="cp_btn_34" data-attr="pemail3" class="cpybtn hpaybtn" style="display: none"><img title="Copy" style="width:13px" src="https://img.icons8.com/ios/50/000000/copy.png"></span></p>                                    
+                                                            </div>
+                                                        </div>
+                    
+                                                        <p class="text-center mt-2">(you can download your viewed contacts from <a href="../mylist">mylist</a>, no need to manually copy paste)</p>
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="col-12 mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="header-title">
+                                        <h3 class="text-center">Recomended Profiles</h3>
+                                    </div>
+                    
+                                    <div class="col-12 mt-1 col-12 justify-content-center">
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Rajesh Nagar</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> Gs Caltex India</p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Ceo &amp; Md</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> Oil &amp; Energy</p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> India</p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="szuodxar3f5f51d773f9b922689d186af3" data-url="https://www.linkedin.com/in/rajesh-nagar-9243438" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Ruhi Dewan</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> Cherubic India</p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Founder And Chief Executive Officer</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> Textiles</p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> Delhi, Delhi, India</p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="gzbrshwt9l60fd0df9f9b922380376fd52" data-url="https://www.linkedin.com/in/ruhi-dewan-8a641043" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Raj Sardana</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> Acs Solutions</p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Ceo</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> Information Technology &amp; Services</p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> United States</p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="ugz7zw4mml61b9974ff9b9225f490a9e4d" data-url="https://www.linkedin.com/in/raj-sardana-61b12515" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Shilpi Sinha</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> </p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Strategic Initiatives Lead @ Jar</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> </p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> </p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="rmnwpuv0at63c60167c5341e617a8b45a3" data-url="https://www.linkedin.com/in/shilpi-sinha-6b3a3a123" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Raviteja Dodda</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> Moengage Inc.</p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Founder &amp; Ceo</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> Computer Software</p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> United States</p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="umuftp3r2y5e0f271af9b9220d16c328a1" data-url="https://www.linkedin.com/in/rteja" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Shailesh Chaturvedi</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> Tommy Hilfiger Apparels India</p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Ceo</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> Apparel &amp; Fashion</p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> India</p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="xqvsfde8rj5e451b73f9b9222e17cef706" data-url="https://www.linkedin.com/in/shailesh-chaturvedi-7511154" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                                <div class="card-wrapper">
+                                                <div class="card-body">
+                                                    <div class="card-text">
+                                                        <p class="c-content"><i class="fa fa-user"></i> Lav Deep Singh</p>
+                                                        <p class="c-content"><i class="fa fa-building"></i> Wunderman Thompson Studios India</p>
+                                                        <p class="c-content"><i class="fa fa-briefcase"></i> Managing Director &amp; Ceo - Asia Pacific</p>
+                                                        <p class="c-content"><i class="fa fa-server"></i> Information Technology &amp; Services</p>
+                                                        <p class="c-content"><i class="fa fa-map-marker"></i> India</p>
+                                                        
+                                                                                                
+                                                            <p>&nbsp;</p>
+                                                            <p><a class="btn btn-primary vphnum" data-attr="0i6obkd7ae61a20df1f9b9225f490a7cf2" data-url="https://www.linkedin.com/in/lavdeep" onclick="getvnum(this)"><i class="fa fa-eye"></i> View Phone</a></p>
+                                                                                        </div>
+                                                </div>
+                                            </div>
+                                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container container-mini">
+                <div class="ft-menu">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="ft-item">
+                                <h3>Support</h3>
+                                <ul>
+                                    <li><a href="privacy.html">Privacy Policies</a></li>
+                                    <li><a href="terms.html">Terms of Service</a></li>
+                                    <li><a href="gdpr.html">GDPR</a></li>
+                                    <li><a href="opt-out.html">Opt-out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="ft-item">
+                                <h3>Company</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0);">Careers</a></li>
+                                    <li><a href="javascript:void(0);">Team</a></li>
+                                    <li><a href="our-data.html">Our Data</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="ft-item">
+                                <h3>&nbsp;</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0);">News</a></li>
+                                    <li><a href="javascript:void(0);">Partner Program</a></li>
+                                    <li><a href="javascript:void(0);">Clients &amp; Testimonials</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-info">
+                    <h3>Download our chrome extension</h3>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between">
+                        <div class="d-flex align-items-center fti-fst">
+                            <svg width="46" height="44" viewBox="0 0 46 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_197_337)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.6512 43.9962C32.5833 43.9962 33.347 43.2457 33.347 42.3331V33.2178C33.9272 28.3038 36.0685 29.7633 38.5879 31.2831C44.6786 34.9564 48.7253 25.2942 43.8026 22.3149C39.9393 19.9767 38.266 23.9969 35.4359 23.5821C34.3428 23.4199 33.5828 22.2621 33.3433 20.5009V13.9162C33.3433 12.9997 32.5796 12.253 31.6475 12.253H23.8573C17.4259 11.4535 23.1348 7.96503 23.1348 4.71792C23.1385 2.11194 20.7314 0 17.7629 0C14.798 0 12.0765 2.11194 12.0765 4.71792C12.0765 7.78023 17.9837 11.4535 11.4626 12.253H1.6958C0.763672 12.253 0 12.9997 0 13.9162V20.4858C0.497884 23.2879 2.42952 23.9366 4.90397 22.0886C5.73877 21.4626 7.14632 20.7347 8.16455 20.7347C10.8187 20.7347 12.9749 23.0918 12.9749 25.9995C12.9749 28.9072 10.8224 31.9054 8.16455 31.9054C7.21745 31.9054 6.33398 31.6037 5.58529 31.0795C5.58529 31.302 0.943359 26.9876 0 32.2674V42.3406C0 43.257 0.763672 44.0038 1.6958 44.0038C6.92546 44.0038 12.1476 44.0038 17.3735 44C17.5794 43.0383 16.9093 41.9371 16.2804 40.9829C11.3315 33.4667 30.5843 32.7162 25.6354 41.2168C25.3921 41.6354 25.1488 42.0427 24.9616 42.4387C24.7257 42.9327 24.5685 43.5361 24.6022 44L31.6512 43.9962Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_197_337">
+                                <rect width="46" height="44" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="ms-2">
+                                <p>Mr. E - Find B2B contacts universally</p>
+                                <div class="star-wrap d-flex align-items-center mt-3">
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.00033 13.3915L14.1503 16.4998L12.7837 10.6415L17.3337 6.69984L11.342 6.1915L9.00033 0.666504L6.65866 6.1915L0.666992 6.69984L5.21699 10.6415L3.85033 16.4998L9.00033 13.3915Z" fill="#FCD037"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.00033 13.3915L14.1503 16.4998L12.7837 10.6415L17.3337 6.69984L11.342 6.1915L9.00033 0.666504L6.65866 6.1915L0.666992 6.69984L5.21699 10.6415L3.85033 16.4998L9.00033 13.3915Z" fill="#FCD037"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.00033 13.3915L14.1503 16.4998L12.7837 10.6415L17.3337 6.69984L11.342 6.1915L9.00033 0.666504L6.65866 6.1915L0.666992 6.69984L5.21699 10.6415L3.85033 16.4998L9.00033 13.3915Z" fill="#FCD037"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.00033 13.3915L14.1503 16.4998L12.7837 10.6415L17.3337 6.69984L11.342 6.1915L9.00033 0.666504L6.65866 6.1915L0.666992 6.69984L5.21699 10.6415L3.85033 16.4998L9.00033 13.3915Z" fill="#FCD037"/>
+                                    </svg>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.6667 6.69984L10.675 6.18317L8.33333 0.666504L5.99167 6.1915L0 6.69984L4.55 10.6415L3.18333 16.4998L8.33333 13.3915L13.4833 16.4998L12.125 10.6415L16.6667 6.69984ZM8.33333 11.8332V4.08317L9.75833 7.44984L13.4083 7.7665L10.6417 10.1665L11.475 13.7332L8.33333 11.8332Z" fill="#FCD037"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between">
+                            <div class="d-flex align-items-center mb-4 mb-sm-0 me-0 me-sm-5">
+                                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.2866 18.2211L18.8179 15.8824C18.5843 15.783 18.3246 15.7621 18.078 15.8227C17.8315 15.8834 17.6113 16.0223 17.4507 16.2186L15.0288 19.1713C11.2279 17.383 8.16904 14.3307 6.37695 10.5379L9.33594 8.12116C9.53305 7.96119 9.67256 7.74149 9.73335 7.49532C9.79414 7.24916 9.7729 6.98993 9.67285 6.75689L7.3291 1.2998C7.21929 1.04859 7.02508 0.843478 6.77996 0.719843C6.53483 0.596207 6.25416 0.561796 5.98633 0.622542L0.908203 1.79192C0.649985 1.85142 0.419602 1.9965 0.254656 2.20348C0.0897096 2.41046 -5.94829e-05 2.66712 2.95713e-08 2.93157C2.95713e-08 15.4293 10.1514 25.5395 22.6562 25.5395C22.9213 25.5396 23.1787 25.4501 23.3862 25.2855C23.5937 25.1209 23.7392 24.891 23.7988 24.6332L24.9707 19.5659C25.0312 19.2974 24.996 19.0162 24.8711 18.7707C24.7463 18.5253 24.5396 18.3309 24.2866 18.2211Z" fill="white"/>
+                                </svg>
+                                <div class="ms-2">
+                                    <h4>Toll Free Number</h4>
+                                    <p>+91-980000000000</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.8062 4.66603C21.1875 2.04663 17.7 0.605957 13.9937 0.605957C6.34375 0.605957 0.11875 6.81768 0.11875 14.4514C0.11875 16.8899 0.75625 19.2723 1.96875 21.3741L0 28.5462L7.35625 26.6191C9.38125 27.723 11.6625 28.303 13.9875 28.303H13.9937C21.6375 28.303 28 22.0913 28 14.4576C28 10.7592 26.425 7.28543 23.8062 4.66603ZM13.9937 25.9705C11.9187 25.9705 9.8875 25.4154 8.11875 24.3677L7.7 24.1182L3.3375 25.2595L4.5 21.0123L4.225 20.5758C3.06875 18.7422 2.4625 16.628 2.4625 14.4514C2.4625 8.10867 7.6375 2.94471 14 2.94471C17.0812 2.94471 19.975 4.14215 22.15 6.31874C24.325 8.49534 25.6625 11.3829 25.6562 14.4576C25.6562 20.8065 20.35 25.9705 13.9937 25.9705ZM20.3188 17.3514C19.975 17.1768 18.2688 16.3411 17.95 16.2288C17.6313 16.1103 17.4 16.0542 17.1688 16.4034C16.9375 16.7527 16.275 17.526 16.0688 17.763C15.8688 17.9938 15.6625 18.025 15.3188 17.8503C13.2812 16.8338 11.9438 16.0355 10.6 13.7341C10.2438 13.1229 10.9562 13.1666 11.6187 11.8444C11.7312 11.6137 11.675 11.4141 11.5875 11.2395C11.5 11.0648 10.8063 9.36224 10.5188 8.66997C10.2375 7.99641 9.95 8.08996 9.7375 8.07748C9.5375 8.06501 9.30625 8.06501 9.075 8.06501C8.84375 8.06501 8.46875 8.15232 8.15 8.49534C7.83125 8.84459 6.9375 9.68031 6.9375 11.3829C6.9375 13.0855 8.18125 14.732 8.35 14.9628C8.525 15.1935 10.7937 18.6861 14.275 20.1891C16.475 21.1371 17.3375 21.2181 18.4375 21.056C19.1063 20.9562 20.4875 20.2203 20.775 19.4095C21.0625 18.5987 21.0625 17.9065 20.975 17.763C20.8938 17.6071 20.6625 17.5198 20.3188 17.3514Z" fill="white"/>
+                                </svg>
+                                <div class="ms-2">
+                                    <h4>Send “Hi” on whatsapp Number</h4>
+                                    <p>+91-980000000000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container container-mini">
+                <div class="d-flex flex-row-reverse align-items-center">
+                    <a href="javascript:void(0);">
+                        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.2084 3.00357C22.9358 1.97929 22.1326 1.17259 21.1128 0.898828C19.2642 0.401367 11.8519 0.401367 11.8519 0.401367C11.8519 0.401367 4.43954 0.401367 2.59097 0.898828C1.57114 1.17263 0.767925 1.97929 0.495312 3.00357C0 4.86015 0 8.73373 0 8.73373C0 8.73373 0 12.6073 0.495312 14.4639C0.767925 15.4882 1.57114 16.2613 2.59097 16.535C4.43954 17.0325 11.8519 17.0325 11.8519 17.0325C11.8519 17.0325 19.2642 17.0325 21.1128 16.535C22.1326 16.2613 22.9358 15.4882 23.2084 14.4639C23.7037 12.6073 23.7037 8.73373 23.7037 8.73373C23.7037 8.73373 23.7037 4.86015 23.2084 3.00357ZM9.4276 12.2506V5.21681L15.6229 8.73381L9.4276 12.2506Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0);" class="me-3">
+                        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.89648 22.24H0.361328V7.66662H4.89648V22.24ZM2.62646 5.67868C1.17627 5.67868 0 4.48007 0 3.03297C1.03799e-08 2.33787 0.276716 1.67125 0.769274 1.17974C1.26183 0.688235 1.92988 0.412109 2.62646 0.412109C3.32305 0.412109 3.9911 0.688235 4.48366 1.17974C4.97621 1.67125 5.25293 2.33787 5.25293 3.03297C5.25293 4.48007 4.07617 5.67868 2.62646 5.67868ZM21.8701 22.24H17.3447V15.1457C17.3447 13.455 17.3105 11.2868 14.9868 11.2868C12.6289 11.2868 12.2676 13.1237 12.2676 15.0239V22.24H7.73731V7.66662H12.0869V9.65456H12.1504C12.7559 8.50954 14.2349 7.30119 16.4414 7.30119C21.0312 7.30119 21.875 10.3172 21.875 14.2346V22.24H21.8701Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0);" class="me-3">
+                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.7386 4.87967C19.7526 5.07612 19.7526 5.2726 19.7526 5.46905C19.7526 11.4609 15.2158 18.3649 6.92388 18.3649C4.36929 18.3649 1.99621 17.6212 0 16.3302C0.362958 16.3723 0.711909 16.3863 1.08883 16.3863C3.19667 16.3863 5.13706 15.6707 6.68656 14.4499C4.70432 14.4078 3.04314 13.1027 2.4708 11.3066C2.75001 11.3486 3.02918 11.3767 3.32236 11.3767C3.72717 11.3767 4.13202 11.3206 4.5089 11.2224C2.44291 10.8014 0.893367 8.97717 0.893367 6.77407V6.71796C1.4936 7.05474 2.19163 7.26522 2.93143 7.29326C1.71695 6.47935 0.921297 5.09015 0.921297 3.5185C0.921297 2.67657 1.14461 1.90478 1.53549 1.23122C3.75505 3.98158 7.09138 5.77771 10.8325 5.9742C10.7627 5.63742 10.7208 5.28664 10.7208 4.93582C10.7208 2.43801 12.731 0.40332 15.2297 0.40332C16.5279 0.40332 17.7005 0.950586 18.5241 1.83463C19.5431 1.63819 20.5203 1.25929 21.3858 0.740103C21.0507 1.79256 20.3388 2.67661 19.4036 3.23787C20.3109 3.13969 21.1904 2.88705 22 2.53627C21.3859 3.43432 20.6181 4.23414 19.7386 4.87967Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0);" class="me-3">
+                        <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2136 13.324L11.8359 9.17038H7.94515V6.47499C7.94515 5.33865 8.48866 4.231 10.2312 4.231H12V0.694673C12 0.694673 10.3949 0.414062 8.86019 0.414062C5.65604 0.414062 3.56167 2.40344 3.56167 6.00477V9.17038H0V13.324H3.56167V23.365H7.94515V13.324H11.2136Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <p class="me-3">Connect with us :</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog" id="mymodalid">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <label for="message" class="form-label"><b>Welcome!</b></label>
+                    <p>We have prepared for you a guided tour to help you get started with finding contact numbers.
+
+</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary " type="button" onclick="myFunction()"  data-bs-dismiss="modal">Start  Tour</button>
+                    <button class="introjs-button " type="button"  data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            //$('#myModal').modal('show');
+        });
+    </script>
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
+<script>
+    function myFunction(){
+        var intro = introJs().setOption("nextLabel", "Next");
+              
+         intro.setOptions({
+          steps: [
+          {            
+            element: '#step1',
+            intro: '<h5><b>Step 1</b></h5><br><p>Visit My List Section to view your searched contacts & download them.</p>',
+            position: 'right'
+          },
+          {
+            element: '#step2',
+            intro: '<h5><b>Step 2</b></h5><br><p>Visit My Team Section to add/remove Team Members.</p>',
+            position: 'right'
+
+
+          },
+          {
+            element: '#step3',
+            intro: '<h5><b>Step 3</b></h5><br><p>Install Mr. E extension to find contacts on Linkedin, Zaubacorp, Tofler, Instafinancial or Crunchbase.</p>',
+            position: 'left'
+          },
+          {
+            element: '#step4',
+            intro: '<h5><b>Step 4</b></h5><br><p>Visit Easyprospect and connect with more than 15 lakh SMEs in India.</p>',
+            position: 'bottom'
+          },
+          {
+            element: '#step5',
+            intro: '<h5><b>Step 5</b></h5><br><p>Search your prospects directly through your dashboard using EasySearch.</p>',
+            position: 'bottom'
+          },
+          {
+            element: '#step6',
+            intro: '<h5><b>Step 6</b></h5><br><p>Visit your profile here.</p>'
+          },
+          {
+            element: '#step7',
+            intro: '<h5><b>Step 7</b></h5><br><p>Visit Upgrade section to make changes/buy a paid plan.</p>'
+          },
+          {
+            element: '#step8',
+            intro: '<h5><b>Step 8</b></h5><br><p>Your total credits will display here. Now head to your checklist to complete certain tasks and earn rewards!</p>',
+            position: 'right'
+          }
+        ]
+      });
+       
+      //intro.start();
+      
+    }  
+        // introJs().start();
+    // introJs().addHints();
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function(){
+            //video
+            $(".play-video").on('click', function(){
+                this.paused ? this.play() : this.pause();
+            })
+
+            //easyTip
+            $(".et-wrap li").each(function(e) {
+                if (e != 0)
+                    $(this).hide();
+            });
+
+            $("#next").click(function(){
+                if ($(".et-wrap li:visible").next().length != 0)
+                    $(".et-wrap li:visible").next().show(1000).prev().hide(1000);
+                else {
+                    $(".et-wrap li:visible").hide(1000);
+                    $(".et-wrap li:first").show(1000);
+                }
+                return false;
+            });
+
+            $("#prev").click(function(){
+                if ($(".et-wrap li:visible").prev().length != 0)
+                    $(".et-wrap li:visible").prev().show(1000).next().hide(1000);
+                else {
+                    $(".et-wrap li:visible").hide(1000);
+                    $(".et-wrap li:last").show(1000);
+                }
+                return false;
+            });
+            if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+            || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+            //$('#pills-title-tab').trigger('click');
+            console.log('here');
+            $('.npbtn').removeClass('active');
+            $('#pills-title-tab').addClass('active');
+            $('.tab-pane').removeClass('show');
+            $('.tab-pane').removeClass('active');
+            $("#pills-title").addClass('show');
+            $("#pills-title").addClass('active');
+
+        }
+        $('.npbtn').on('click',function(){
+            $('.npbtn').removeClass('active');
+            $(this).addClass('active');
+            $('.tab-pane').removeClass('show');
+            $('.tab-pane').removeClass('active');
+
+            var dtr = $(this).attr('data-target');
+            $(dtr).addClass('show');
+            $(dtr).addClass('active');
+            
+        })
+        $('.search-btn').on('click',function(){
+            search_url();
+        });
+        $('.search1-btn').on('click',function(){
+            search_email();
+        });
+        $('.search2-btn').on('click',function(){
+            search_title();
+        })
+        $('body').on('click', '.cpybtn', function() {
+            // do something
+            var ct = $(this).attr('data-attr');
+            cp_data(ct);
+        });
+        $('.search3-btn').on('click',function(){
+            search_din();
+        })
+        $('.sgst').on('click',function(){
+          /*var gck = $(this).attr('data-attr');
+          if(gck=="1"){
+            window.location.href = "https://dashboard.easyleadz.com/gstupload";
+          }else{
+            $.alert('This is only available to custom plan user. Please contact support@easyleadz.com to enable this feature.')
+          }
+          */
+          window.location.href="https://dashboard.easyleadz.com/gstupload";
+          return false;
+        })
+        });
+       
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

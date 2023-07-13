@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+.modal-title {
+    margin: 0;
+    line-height: 1.2;
+    text-align:center;
+}
+
+input{
+    font-size:17px!important;
+    padding:6px;
+}
+.modal-body{
+    padding:0px!important;
+}
+#myModal2 .modal-body{
+    padding:30px!important
+}
+#myModal2 .modal-body>button.close{
+    margin-bottom:0px!important;
+}
+button.close{
+     margin-bottom: -50px;
+    color: black;
+    font-size: 42px;
+    margin-right: 10px;
+}
+.col-md-7{
+    padding-top:10px;
+    padding-left:33px;
+}
+.contents{
+    padding-top:10px;
+    padding-left:33px;
+}
+.modal h4{
+    font-size: 20px;
+}
+.allbtns .btn{
+    width: 76%!important;
+    border-radius: 22px!important;
+}
+
+  
+ .btng{
+  background:rgb(250 88 87);
+ }
+ .btnin{
+  background:#007bff;
+ }
+ 
+
+
+
+@keyframes masked{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translatey(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+}
+
+.Target{ 
+  z-index:1;
+}
+
+.Target h1{
+  text-align:center;
+  font-size: 16px;
+  font-weight:900;
+  background: -webkit-linear-gradient(
+      left,
+      rgb(255, 0, 140) 0%,
+      #910e56 25%,
+      #97b1fb 50%,
+      #0ff 100%
+    )
+    repeat;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+   animation: masked 40s linear infinite, fadeInDown 1.5s both 1;
+  -webkit-animation: masked 40s linear infinite, fadeInDown 1.5s both 1;
+  -moz-animation:masked 40s linear infinite, fadeInDown 1.5s both 1;
+  -o-animation: masked 40s linear infinite, fadeInDown 1.5s both 1;
+}
+.large{
+    font-size:15px;
+}
+.ctn{
+    text-align:center;
+}
+</style>
+<div class="container">
+  <h2>Modals</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Modal 1</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+                
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-7">
+                <h3 class="modal-title"><b>Don't miss out! Join our Free Webinar!</b></h3>
+                <br>
+                <p class="large">We are super excited to invite you to our upcoming webinar on <b>How to Generate High-Quality Leads for Corporate Gifting Business!</b> on <b>12th July, 2023, 4:30 to 5:30 pm </b>on Zoom.</p>
+                
+                <div class="Target">
+                  <h1>Only 100 spots left! First come first serve Basis!</h1>
+                  <br>
+                  </div>
+                
+                <div class="allbtns ctn">
+                <button class="btn btn-info"> RESERVE MY SPOT!</button>
+              </div>
+                
+            </div>
+            <div class="col-md-5">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>          
+                <img src="../img/modal1.png" class="img-responsive">
+            </div>
+          </div> 
+          
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+  
+ 
+
+</div>
+
+    
+
+</body>
+</html>

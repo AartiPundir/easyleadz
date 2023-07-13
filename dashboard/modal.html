@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+@media only screen and (max-width: 600px) {
+  
+}
+
+input{
+    font-size:17px!important;
+    padding:6px;
+}
+.modal-body{
+    padding:0px!important;
+}
+#myModal2 .modal-body{
+    padding:30px!important
+}
+#myModal2 .modal-body>button.close{
+    margin-bottom:0px!important;
+}
+button.close{
+     margin-bottom: -50px;
+    color: black;
+    font-size: 42px;
+    margin-right: 10px;
+}
+.col-md-7{
+    padding-top:10px;
+    padding-left:33px;
+}
+.contents{
+    padding-top:10px;
+    padding-left:33px;
+}
+.modal h4{
+    font-size: 20px;
+}
+.allbtns .btn{
+    width: 76%!important;
+    border-radius: 22px!important;
+}
+input{
+  border-radius: 2px;
+    background: rgb(221 239 245);
+    border: 1px solid white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #7cbfd5eb;
+}
+.modal1btn{
+  background:rgb(250 88 87);
+  color:white;
+}
+  
+ .btng{
+  background:rgb(250 88 87);
+ }
+ .btnin{
+  background:#007bff;
+ }
+ .btnem
+ {
+  background:#6610f2;
+ }
+ .mr{
+  margin:10px!important;
+ }
+.ctn{
+  text-align: center;
+}
+.mrimg{
+  margin-top:38px;
+}
+.btnttmr{
+  background:rgb(250 88 87);
+}
+.atr{
+  font-size:18px;
+  text-align:center;
+}
+
+
+
+@keyframes masked{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translatey(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+}
+
+.Target{ 
+  z-index:1;
+}
+
+.Target h1{
+  text-align:center;
+  font-size: 16px;
+  font-weight:900;
+  background: -webkit-linear-gradient(
+      left,
+      rgb(255, 0, 140) 0%,
+      #910e56 25%,
+      #97b1fb 50%,
+      #0ff 100%
+    )
+    repeat;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  /*Animation  한번에 여러개 적용하기 */
+  animation: masked 5s linear infinite, fadeInDown 1.5s both 1;
+  -webkit-animation: masked 5s linear infinite, fadeInDown 1.5s both 1;
+  -moz-animation:masked 5s linear infinite, fadeInDown 1.5s both 1;
+  -o-animation: masked 5s linear infinite, fadeInDown 1.5s both 1;
+}
+</style>
+<div class="container">
+  <h2>Modals</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Modal 1</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Modal 2</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Modal 3</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Modal 4</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+                
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-7">
+                <h2 class="modal-title"><b>Don't miss out! Join our Free Webinar!</b></h2>
+                <p>We are super excited to invite you to our upcoming webinar on <b>How to Generate High-Quality Leads for Corporate Gifting Business!</b> on <b>12th July, 2023, 4:30 to 5:30 pm </b>on Zoom.</p>
+                
+                <div class="Target">
+                  <h1>Limited Seats! First come first serve Basis!</h1>
+                  <br>
+                  </div>
+                <!-- <p class="atr"></p> -->
+                <!-- <form>
+                    <input type="text" value="Enter your email" style="width:60%">
+                    <input type ="submit" class="btn modal1btn" value="RESERVE MY SPOT!" style="letter-spacing: 2px;">
+                </form> -->
+                <div class="allbtns ctn">
+                <button class="btn btn-info"> RESERVE MY SPOT!</button>
+              </div>
+                <br>
+                <!-- <p>click here to <u>signup</u> to begin with your free trial</p> -->
+            </div>
+            <div class="col-md-5">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>          
+                <img src="../img/modal1.png" class="img-responsive">
+            </div>
+          </div> 
+          
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+                
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-7">
+                <h3 class="modal-title"><b>Sign up now and get a free trial to Easyprospect!</b></h3>
+                <p  style="text-align:justify">Where you can connect with more than 1.5 million SMEs in India!</p>
+                
+                <div class="allbtns">
+                <center>
+                 <button class="btn btn-danger btng"> Sign Up With G</button>
+                  
+                 <p class="mr">OR</p>
+                 <button class="btn btn-primary btnin"> Sign Up With in</button>
+              
+                 <p class="mr">OR</p>
+                 <button class="btn btn-info btnem"> Sign Up With Work Email</button>
+                </center>
+            </div>
+                
+            </div>
+            <div class="col-md-5">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>          
+                <img src="../img/modal1.png" class="img-responsive">
+            </div>
+          </div> 
+          
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+                
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-7">
+                <h1 class="modal-title ctn"><b>Signup now!</b></h1><br>
+                <p style="font-size:18px;">And grab this Limited Period Offer valid till date to avail 10%  extra credits on any subscription of your choice!</p>
+                <br>
+                <a style="font-size:23px;" ><b style="color:black!important"><center>Click here to <u>signup</u></center></b></a>
+            </div>
+                
+            
+            <div class="col-md-5">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>          
+                <img src="../img/modal3.png" class="img-responsive mrimg">
+            </div>
+          </div> 
+          
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+                
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+                <div class="contents">
+                <br>
+                <h4 class="modal-title"><b>You will miss out on this great offer if you leave!</b></h4>
+                <br>
+                <p  >Get 10% Bonus Credit extra on  any of the plans.</p>
+                <br>
+                <p >Offer valid till 12th July, 2023, midnight!</p>
+                
+                
+                <div class="allbtns">
+                <center>
+                    <h3 id="demo">01:16:23</h3>
+                    <br>
+                    <button class="btn btn-info btnttmr"> Buy Now</button>
+                    
+                </center>
+            </div>
+            </div>
+                
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>          
+                <img src="../img/modal4.png" class="img-responsive">
+            </div>
+          </div> 
+          
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    
+
+</body>
+</html>
